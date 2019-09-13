@@ -30,4 +30,11 @@ class CashRegister
       "After the discount, the total comes to $#{@total.to_i}."
     end 
   end 
+  
+  def void_last_transaction
+    quantity.times do 
+      @items.pop
+      
+      @total += price
+    end
 end 
