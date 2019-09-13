@@ -35,7 +35,7 @@ class CashRegister
     @last_quantity.times do 
       @items.pop
       
-      @total -= price
+      @total -= @last_price
     end
   end 
 end 
