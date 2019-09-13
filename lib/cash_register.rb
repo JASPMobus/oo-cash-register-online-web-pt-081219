@@ -8,6 +8,12 @@ class CashRegister
   end 
   
   def add_item(item, price)
-    cart = 
+    if cart.has_key?(item)
+      cart[item] += 1
+    else 
+      cart[item] = 1 
+    end 
+    
+    @total += price
   end 
 end 
