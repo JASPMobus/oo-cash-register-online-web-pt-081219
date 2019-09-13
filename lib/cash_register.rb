@@ -4,17 +4,15 @@ class CashRegister
   def initialize(discount = 0)
     @total = 0
     @discount = discount
-    @cart = {}
+    @cart = []
   end 
   
   def add_item(item, price, quantity = 1)
-    if cart.has_key?(item)
-      cart[item] += quantity
-    else 
-      cart[item] = quantity
-    end 
-    
-    @total += (price * quantity)
+    quantity.times do 
+      @cart.push(item)
+      
+      @total += price
+    end
   end
   
   def apply_discount
