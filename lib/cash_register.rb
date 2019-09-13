@@ -32,7 +32,7 @@ class CashRegister
   end 
   
   def void_last_transaction
-    quantity.times do 
+    @last_quantity.times do 
       @items.pop
       
       @total -= price
